@@ -1,30 +1,91 @@
 <!DOCTYPE html>
-<hyml lang="ua">
-    <head>
-        <title>Знайомство з HTML тегами. Частина 2 </title>
-        <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-        </head>
-        <body>
-<h1>5 Причин почему ты милашка!</h1>
-<p>Представь насколько ти уникален, а всё потому что ты создан Богом!</p>
-<p> 
-    <span>
-        А Бог создает только шедевры, <a href="https://www.bible-center.ru/ru/bibletext/synnew_ru/ps/138:14-16"> Если ти не знаешь как это проверить?</a> 
-        </span>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Схема страницы</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #c6f1fb;
+    }
 
-    <div> Этот стих подчёркивает, что каждый человек — шедевр Божьего творения. </div>
-    <h2>Требование чтобы быть милашкой!</h2>
-    <ol>
-        <li>Посмотреть в зеркало</li>
-        <li>Улыбнуться</li>
-        <li>Сказать себе что-то доброе</li>
-        <li>Оставаться собой, даже если весь мир требует другого</li>
-        <li>Верить, что ты уникальний — потому что это правда.</li>
-  </ol>
-  <h2>Пример:</h2>
-  <p>Быть милашкой — это не про внешность, а про тепло, которое ты несёшь.</p>
- <img src="https://i.pinimg.com/736x/54/8d/79/548d795c8c17935dab1f14523209036a.jpg" >
- <p>Выходит тебе достаточно улыбнуться )) ></p>
-            </body>
-            </hyml>
+    .container {
+      display: grid;
+      grid-template-areas: 
+        "header header"
+        "aside article"
+        "footer footer";
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: auto 1fr auto;
+      gap: 10px;
+      padding: 10px;
+    }
 
+    header {
+      grid-area: header;
+      background: #00b5b5;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    aside {
+      grid-area: aside;
+      background: #6fd96f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    article {
+      grid-area: article;
+      background: #f9a941;
+      padding: 20px;
+      color: white;
+    }
+
+    .images {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      justify-content: space-between;
+    }
+
+    .image {
+      background: #ffde59;
+      color: white;
+      flex: 1;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    footer {
+      grid-area: footer;
+      background: #00b5b5;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>Header</header>
+    <aside>Aside</aside>
+    <article>
+      Article
+      <div class="images">
+        <div class="image">Image</div>
+        <div class="image">Image</div>
+        <div class="image">Image</div>
+      </div>
+    </article>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>
